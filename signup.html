@@ -3,11 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Signup to Counsellor Connect</title>
-    <style>
-        .hidden {
-            display: none;
-        }
-    </style>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body class="form">
@@ -24,16 +19,15 @@
     <button class="headerButton" onclick="window.location.href='/signup'">Sign Up</button>
 </div>
 
-
 <div class="formContainer">
     <form id="loginInfoForm">
         <h1 class="form">Sign Up</h1>
         <div id="loginInfoContainer">
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required><br><br>
+            <input type="text" id="email" name="email" autocomplete="email" required><br><br>
 
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
+            <input type="text" id="username" name="username" autocomplete="username" required><br><br>
 
             <label for="userType">User Type</label>
             <select name="dropdown" id="userType" required>
@@ -41,7 +35,7 @@
                 <option value="mentor">Mentor</option>
             </select><br><br>
 
-            <input type="submit" id="next" value="Next" onclick="buttonPressed()">
+            <input type="button" id="next" value="Next" onclick="nextButton()">
         </div>
     </form>
 
@@ -49,50 +43,55 @@
         <h1 class="form">Sign Up</h1>
         <div class="formBlanksContainer">
             <label for="password">Password:</label>
-            <input type="password" id="password" required><br><br>
+            <input type="password" id="password" autocomplete="new-password" required><br><br>
 
             <label for="confirmPass">Confirm Password:</label>
             <input type="password" id="confirmPass" required><br><br>
 
-            <input type="submit" id="submit" value="Submit" onclick="buttonPressed()">
+            <input type="button" id="submit" value="Submit" onclick="submitButton()">
         </div>
     </form>
 </div>
 
 
 <script>
-    document.getElementById('loginInfoForm').classList.remove('hidden');
-    document.getElementById('passwordForm').classList.add('hidden');
-
-    let i = true;
-
     let email = '';
     let username = '';
     let userType = '';
 
-    function buttonPressed() {
-        if (i) nextButton();
-        else submitButton();
-    }
-
     function nextButton() {
         email = document.getElementById('email').value;
+        username = document.getElementById('username').value;
+        userType = document.getElementById('userType').value;
+
+        if (email === '') {
+            document.getElementById('email').classList.add('empty');
+            return;
+        } else if (username === '') {
+            return;
+        } else if (userType === '') {
+            return;
+        }
+
         if (!checkEmail(email)) {
             //TODO: email is already in use
         } else {
-            username = document.getElementById('username').value;
-            userType = document.getElementById('userType').value;
-
             document.getElementById('loginInfoForm').classList.add('hidden');
             document.getElementById('passwordForm').classList.remove('hidden');
-
-            i = false
         }
     }
 
     function submitButton() {
         let password = document.getElementById('password').value;
-        if (password === document.getElementById('confirmPass').value) {
+        let confirmPass = document.getElementById('confirmPass').value;
+
+        if (password === '') {
+            return;
+        } else if (confirmPass === '') {
+            return;
+        }
+
+        if (password === confirmPass) {
             User(email, username, userType, password);
         } else {
             //TODO: password does not match confirmPass

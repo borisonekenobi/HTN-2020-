@@ -1,10 +1,18 @@
-*{
+* {
     margin: 0;
     border: 0;
     padding: 0;
 }
 
-.header{
+.hidden {
+    display: none;
+}
+
+.empty {
+
+}
+
+.header {
     background-color: #eeeeee;
     color: #00ccff;
     height: 10vh;
@@ -12,7 +20,7 @@
     font-size: 2em;
 }
 
-img.headerLogo{
+img.headerLogo {
     width: 7vh;
     margin: 1vh 2vw;
     border: #ff1493 1px solid;

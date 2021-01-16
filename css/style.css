@@ -11,9 +11,11 @@
 
 .headerText{
     color: red;
-    margin: auto;
-    padding: 0% 2.5%;
+    margin: 0%;
+    border: 0%;
+    padding: 0% 1.5%;
     float: left;
+    font-size: 4vh;
 }
 
 #headerlogo {
@@ -21,12 +23,30 @@
     height: 100%
 }
 
-#joinButton{
-    align-self: right;
-    margin-right: 2vh;
+#joinButtonDiv{
+    text-align: right;
+    margin-right: 0.5vw;
+    padding-right: 1vw;
     float: right;
     margin-top: 0.5vh;
-    border: 3vh;
+    border: 3vw;
+    height: 2vh;
+    width: 10vw;
+}
+
+#joinButton{
+    height: 5vh;
+    font-size: 1.5vh;
+    padding: 0;
+}
+
+.pageTextDiv{
+    height: 40vh;
+}
+
+.pageText {
+    text-align: center;
+    font-size: 5vh;
 }
 
 /* Page content */

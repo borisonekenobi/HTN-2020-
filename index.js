@@ -37,6 +37,9 @@ fs.readFile('home.html', (err, html) => {
                 } else if (pathname.endsWith('.html')) {
                     util.fileResponse(res, pathname, 'text/html');
 
+                } else if (pathname === 'favicon.ico') {
+                    util.fileResponse(res, pathname, 'image/ico');
+
                 } else {
                     res.statusCode = 418;
                     res.writeHead(418, {'Content-Type': 'text/html'});
@@ -56,7 +59,7 @@ fs.readFile('home.html', (err, html) => {
             } else {
                 res.statusCode = 404;
                 res.writeHead(404, {'Content-Type': 'text/html'});
-                res.write(util.customError(e404));
+                //res.write(util.customError(e404));
                 return res.end();
             }
         });

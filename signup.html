@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-<script src="createuser.js"></script>
+<script src="createUser.js"></script>
 <script src="util.js"></script>
 <form>
     <!--First part of form (email, username, user type)-->
@@ -37,6 +37,8 @@
 </form>
 
 <script>
+    //const createUser = require("./createUser");
+
     document.getElementById('loginInfoDiv').classList.remove('hidden');
     document.getElementById('passwordDiv').classList.add('hidden');
     document.getElementById('submit').value = "Next";
@@ -71,10 +73,13 @@
     function submitButton() {
         let password = document.getElementById('password').value;
         if (password === document.getElementById('confirmPass').value) {
-            createUser(email, username, userType, password);
+            const newUser = User(username, email, password, userType);
+            //bring to main page (find others)
+            //TODO: add to database
         } else {
             //TODO: password does not match confirmPass
         }
+
     }
 </script>
 </body>

@@ -56,7 +56,7 @@ fs.readFile('home.html', (err, html) => {
             } else {
                 res.statusCode = 404;
                 res.writeHead(404, {'Content-Type': 'text/html'});
-                //res.write(util.customError(e404));
+                res.write(util.customError(e404));
                 return res.end();
             }
         });

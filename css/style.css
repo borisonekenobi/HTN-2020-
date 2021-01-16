@@ -26,7 +26,7 @@ h1.headerText{
     font-size: 2em;
 }
 
-button.joinUs{
+button.headerButton{
     background-color: #00ccff;
     padding: 0.5%;
     color: #f1f1f1;
@@ -87,6 +87,39 @@ p.howItWorks{
     width: 45vw;
     margin: 14vh 1vw;
     font-size: xxx-large;
+}
+
+body.form{
+    background-color: #abe0ec;
+}
+
+.formContainer{
+    align-content: center;
+    text-align: center;
+    width: 30vw;
+    height: 65vh;
+    margin: 5% auto 0 auto;
+    font-size: 1em;
+    background-color: #ffffff;
+    border: 3px #eadfdf solid;
+}
+
+h1.form{
+    color: #000000;
+    font-size: 3em;
+    padding: 5% 0 0 0;
+    margin: 5% auto 10% auto;
+}
+
+.formBlanksContainer{
+    width: 24vw;
+    height: 34vh;
+    margin: 15% auto 0 auto;
+}
+
+label.form{
+    color: #888888;
+    float: left;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */

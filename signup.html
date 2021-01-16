@@ -8,37 +8,56 @@
             display: none;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body class="form">
 <script src="createuser.js"></script>
 <script src="util.js"></script>
-<form>
-    <!--First part of form (email, username, user type)-->
-    <div id="loginInfoDiv">
-        <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required><br><br>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        <label for="userType">User Type</label>
-        <select name="dropdown" id="userType" required>
-            <option value="mentee" selected>Mentee</option>
-            <option value="mentor">Mentor</option>
-        </select><br><br>
-    </div>
 
-    <!--Second part of form (password)-->
-    <div id="passwordDiv" class="hidden">
-        <label for="password">Password:</label>
-        <input type="password" id="password" required><br><br>
-        <label for="confirmPass">Confirm Password:</label>
-        <input type="password" id="confirmPass" required><br><br>
-    </div>
-    <input type="submit" id="submit" value="Next" onclick="buttonPressed()">
-</form>
+<div class="header" id="header">
+    <img src="img/png/placeholder-256x256.png" class="headerLogo" alt="logo">
+    <h1 class="headerText">
+        Counsellor Connect
+    </h1>
+
+    <button class="headerButton" onclick="window.location.href='/HTN-2020-/login.html'">Log In</button>
+    <button class="headerButton" onclick="window.location.href='/HTN-2020-/signup.html'">Sign Up</button>
+</div>
+
+
+<div class="formContainer">
+    <form>
+        <h1 class="form">Sign Up</h1>
+        <!--First part of form (email, username, user type)-->
+        <div class="formBlanksContainer">
+            <div id="loginInfoContainer">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" required><br><br>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required><br><br>
+                <label for="userType">User Type</label>
+                <select name="dropdown" id="userType" required>
+                    <option value="mentee" selected>Mentee</option>
+                    <option value="mentor">Mentor</option>
+                </select><br><br>
+            </div>
+
+            <!--Second part of form (password)-->
+            <div id="passwordContainer" class="hidden">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required><br><br>
+                <label for="confirmPass">Confirm Password:</label>
+                <input type="password" id="confirmPass" required><br><br>
+            </div>
+            <input type="submit" id="submit" value="Next" onclick="buttonPressed()">
+        </div>
+    </form>
+</div>
+
 
 <script>
-    document.getElementById('loginInfoDiv').classList.remove('hidden');
-    document.getElementById('passwordDiv').classList.add('hidden');
+    document.getElementById('loginInfoContainer').classList.remove('hidden');
+    document.getElementById('passwordContainer').classList.add('hidden');
     document.getElementById('submit').value = "Next";
 
     let i = true;
@@ -60,8 +79,8 @@
             username = document.getElementById('username').value;
             userType = document.getElementById('userType').value;
 
-            document.getElementById('loginInfoDiv').classList.add('hidden');
-            document.getElementById('passwordDiv').classList.remove('hidden');
+            document.getElementById('loginInfoContainer').classList.add('hidden');
+            document.getElementById('passwordContainer').classList.remove('hidden');
             document.getElementById('submit').value = "Submit";
 
             i = false

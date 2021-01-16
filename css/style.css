@@ -121,7 +121,7 @@ h1.form{
 }
 
 .fields{
-    margin-bottom: 7%;
+    margin: 0 0 7% 0;
 }
 
 .formBlanksContainer{
@@ -144,7 +144,7 @@ input.form{
     border-bottom: #817d7d 3px solid;
     padding: 3%;
     width: 100%;
-    margin-bottom: 2%;
+    margin: 0 auto 2% auto;
 }
 
 #forgotPassword{

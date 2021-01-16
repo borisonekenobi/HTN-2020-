@@ -1,4 +1,7 @@
 //test users
+let nameField = document.getElementById('username');
+console.log(nameField)
+
 let numUsedIds = 0
 const testMentor = new User(1, 'math, music, science', 'mentor');
 const testMentee = new User(2, 'math, music, science', 'mentee');
@@ -25,13 +28,17 @@ function addToDatabase(user) {
 }
 
 function onRegistrationSubmit() {
-    createuser(id, name, tags, role);
+    createUser(name, tags, role);
 }
 
-function createuser(id, name, tags, role) {
+function createUser(name, tags, role) {
     //if registration conditions are met create new user
     const newUser = new User(numUsedIds + 1, name, tags, role);
     addToDatabase();
+}
+
+function submitClick() {
+    console.log(nameField.value);
 }
 
 

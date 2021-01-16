@@ -10,26 +10,27 @@
     </style>
 </head>
 <body>
+<script src="createuser.js"></script>
 <script src="signup.js"></script>
-<form>
-    <div id="usernameDiv">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-    </div>
-    <div id="userTypeDiv">
-        <label for="userType">User Type</label>
-        <select name = "dropdown" id="userType" required>
-            <option value="mentee" selected>Mentee</option>
-            <option value="mentor">Mentor</option>
-        </select><br><br>
-    </div>
-    <input type="submit" value="Next" onclick="nextButton()">
-</form>
+    <form>
+        <div id="usernameDiv">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+        </div>
+        <div id="userTypeDiv">
+            <label for="userType">User Type</label>
+            <select name = "dropdown" id="userType" required>
+                <option value="mentee" selected>Mentee</option>
+                <option value="mentor">Mentor</option>
+            </select><br><br>
+        </div>
+        <input type="submit" value="Next" onclick="nextButton()">
+    </form>
 
 <script>
     let i = 0;
     function nextButton() {
-
+        submitClick()
     }
 </script>
 </body>

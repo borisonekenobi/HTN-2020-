@@ -20,24 +20,26 @@
 </div>
 
 <div class="formContainer">
-    <form id="loginInfoForm">
-        <h1 class="form">Sign Up</h1>
-        <div id="loginInfoContainer">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" autocomplete="email" required><br><br>
+    <h1 class="form">Sign Up</h1>
 
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" autocomplete="username" required><br><br>
+    <div class="formBlanksContainer">
+        <form id="loginInfoForm">
+            <div class="fields" id="loginInfoContainer">
+                <p class="form">Email</p>
+                <input class="form" type="text" id="email" name="email" autocomplete="email" placeholder="Email" required>
+                <p class="form">Username</p>
+                <input class="form" type="text" id="username" name="username" autocomplete="username" placeholder="Username" required>
 
-            <label for="userType">User Type</label>
-            <select name="dropdown" id="userType" required>
-                <option value="mentee" selected>Mentee</option>
-                <option value="mentor">Mentor</option>
-            </select><br><br>
+                <label for="userType">User Type</label>
+                <select name="dropdown" id="userType" required>
+                    <option value="mentee" selected>Mentee</option>
+                    <option value="mentor">Mentor</option>
+                </select><br><br>
 
-            <input type="button" id="next" value="Next" onclick="nextButton()">
-        </div>
-    </form>
+                <input type="button" id="next" value="Next" onclick="nextButton()">
+            </div>
+        </form>
+    </div>
 
     <form id="passwordForm" class="hidden">
         <h1 class="form">Sign Up</h1>

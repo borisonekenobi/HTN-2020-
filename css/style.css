@@ -71,7 +71,7 @@ h1.howItWorks{
     text-align: center;
     color: #ffffff;
     font-size: 5em;
-
+    margin: ;
 }
 
 img.howItWorks{
@@ -81,6 +81,8 @@ img.howItWorks{
 
 p.howItWorks{
     float: right;
+    color: #ffffff;
+    width: 45vw;
 }
 
 /* Page content */

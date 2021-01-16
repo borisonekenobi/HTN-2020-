@@ -18,7 +18,17 @@ function customError(errFile) {
 }
 
 function checkEmail(email) {
-    console.log(email);
+    fetch('userData.json')
+        .then(function (response) {
+            //console.log(response);
+            for (let i = 0; i < response.length; i++) {
+                console.log(response[i]);
+            }
+        })
+        .catch(function (err) {
+            console.error(err);
+        });
+
     return true;
 }
 

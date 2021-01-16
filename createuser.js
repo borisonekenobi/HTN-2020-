@@ -1,8 +1,7 @@
 //test users
-let nameField = document.getElementById('username');
-console.log(nameField)
+const users = {};
+let numUsedIds = 0;
 
-let numUsedIds = 0
 const testMentor = new User(1, 'math, music, science', 'mentor');
 const testMentee = new User(2, 'math, music, science', 'mentee');
 
@@ -16,29 +15,20 @@ function User(id, name, tags, role) {
 }
 
 User.prototype.getTags = function() {
-    //return array/string
-}
-
-function createUniqueId() {
-    return numUsedIds + 1;
-}
-
-function addToDatabase(user) {
-    //add to database
-}
-
-function onRegistrationSubmit() {
-    createUser(name, tags, role);
+    return this.tags
 }
 
 function createUser(name, tags, role) {
     //if registration conditions are met create new user
     const newUser = new User(numUsedIds + 1, name, tags, role);
-    addToDatabase();
+    users.push(newUser);
 }
 
 function submitClick() {
-    console.log(nameField.value);
+    const nameField = document.getElementById('username');
+    const userTypeField = document.getElementById('userType');
+    const userTagsField = document.getElementById('userTags');
+    createUser(nameField.value, userTagsField.value, userTypeField.value);
 }
 
 

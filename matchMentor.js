@@ -1,11 +1,10 @@
-let allMentors = {};
 let found = {};
-let mentee = undefined;
+let allMentors = {};
+let mentee = {};
 
 function findRelevant(mentee) {
-
-    for (let i = 0; i <= allMentors.length; count++) {
-        const newFind = isMatch(allMentors[count], mentee);
+    for (let i = 0; i < allMentors.length; i++) {
+        const newFind = isMatch(allMentors[i], mentee);
         if (newFind !== false) {
             console.log("New match with " + newFind.name);
             found.push(newFind);
@@ -14,12 +13,12 @@ function findRelevant(mentee) {
 }
 
 function isMatch(mentor, mentee) {
-    if (mentor.tags[0] === mentee.tags[0]) { //investigate ===
-        return mentor;
-    }
-    else {
-        console.log("Not a match")
-        return false;
+    for (let i = 0; i < mentor.tags.length; i++) {
+        for (let j = 0; j < mentee.tags.length; j++) {
+            if (mentor.tags[j] === mentee.tags[i]) {
+                return mentor;
+            }
+        }
     }
 }
 

@@ -1,16 +1,21 @@
 /* Style the header */
 .header {
     padding: 10px 16px;
-    background: #555;
+    background: #eeeeee;
     color: #f1f1f1;
     align-self: center;
     margin: auto;
     width: 100%;
     height: 5vh;
+
+}
+
+#header{
+
 }
 
 .headerText{
-    color: red;
+    color: #00ccff;
     margin: 0%;
     border: 0%;
     padding: 0% 1.5%;
@@ -37,16 +42,23 @@
 #joinButton{
     height: 5vh;
     font-size: 1.5vh;
-    padding: 0;
+    padding: 10%;
+    background-color: #00ccff;
+    color:#fff;
+    border: none;
 }
 
 .pageTextDiv{
     height: 40vh;
 }
 
-.pageText {
+.pageHeading{
     text-align: center;
     font-size: 5vh;
+}
+
+.pageText{
+    
 }
 
 /* Page content */

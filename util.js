@@ -10,4 +10,11 @@ function fileResponse(res, image, contentType) {
     });
 }
 
-module.exports = {fileResponse}
+function customError(errFile) {
+    fs.readFile(errFile, function (err, data) {
+        if (err) throw err;
+        return data;
+    });
+}
+
+module.exports = {fileResponse, customError}

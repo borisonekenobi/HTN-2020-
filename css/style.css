@@ -14,9 +14,10 @@
 
 img.headerLogo{
     width: 7vh;
-    margin: 1vh 1vw;
+    margin: 1vh 2vw;
     border: #ff1493 1px solid;
     float: left;
+    /*margin-left: 2%;*/
 }
 
 h1.headerText{
@@ -62,42 +63,35 @@ button.tryItNow{
 
 .howItWorksContainer{
     height: 100vh;
-    width: 100vw;
+    width: 98vw;
     background-color: #ff61be;
-    margin: 5% 0 0 0;
+    margin: 5% auto;
 }
 
 h1.howItWorks{
     text-align: center;
     color: #ffffff;
     font-size: 5em;
-    margin: ;
+    margin: 15vh 0 2.5%;
 }
 
 img.howItWorks{
     width: 45em;
     float: left;
+    margin: 0 0.5vw;
 }
 
 p.howItWorks{
     float: right;
     color: #ffffff;
     width: 45vw;
-}
-
-/* Page content */
-.content {
-    padding: 0;
+    margin: 14vh 1vw;
+    font-size: xxx-large;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
     top: 0;
-    width: 100%
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-    /*padding-top: 102px;*/
-}

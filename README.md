@@ -6,3 +6,4 @@ Features to add:
 Core
 - catagories/tags system
 - User class (personal info, tags, etc)
+- signup page

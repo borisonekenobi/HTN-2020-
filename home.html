@@ -2,30 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Title</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
 <div class="header" id="header">
-    <img src="img/placeholder-256x256.png" id="headerLogo" alt="logo">
-    <h1 class="headerText">My Header</h1>
-    <div id="joinButtonDiv">
-        <button id="joinButton">Join Us!</button>
-    </div>
+    <img src="img/png/placeholder-256x256.png" class="headerLogo" alt="logo">
+    <h1 class="headerText">
+        Counsellor Connect
+    </h1>
+
+    <button class="joinUs">Join Us</button>
 </div>
 
-<div class="pageTextDiv">
-    <p class="pageHeading">
-        Find A </p>
-    <p id="mentor">Mentor</p>
+<div class="pageTextContainer">
+    <h1 class="pageText">
+        Find a
+        <br>
+        <span style="color:#000000;">mentor</span>
+    </h1>
+
+    <p class="pageText">
+        Get professional guidance<br>for your passion
     </p>
+    <button class="tryItNow">Try it Now!</button>
+</div>
 
-    <p class="pageText">Get professional guidance<br> for your passion</p>
-
-    <button id="tryItNowButton">Try It Now</button>
-
+<div class="howItWorksContainer">
+    <h1 class="howItWorks">
+        How It Works
+    </h1>
+    <img src="img/png/howItWorks.png" class="howItWorks" alt="flowchart">
+    <p class="howItWorks">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Dignissimos illum pariatur sed aspernatur neque a atque!
+        Delectus distinctio id suscipit illum earum amet,
+        accusamus ad quasi veniam perspiciatis nihil expedita!
+    </p>
 </div>
 
 
@@ -34,7 +48,7 @@
     window.onscroll = function() {myFunction()};
 
     // Get the header
-    let header = document.getElementById("myHeader");
+    let header = document.getElementById("header");
 
     // Get the offset position of the navbar
     let sticky = header.offsetTop;

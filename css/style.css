@@ -23,9 +23,10 @@
 
 #joinButton{
     align-self: right;
-    margin-right: 2%;
+    margin-right: 2vh;
     float: right;
-    border: 3%;
+    margin-top: 0.5vh;
+    border: 3vh;
 }
 
 /* Page content */

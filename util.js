@@ -32,4 +32,13 @@ function checkEmail(email) {
     return true;
 }
 
-module.exports = {fileResponse, customError, checkEmail}
+function loadPage(req, res, path) {
+    fs.readFile(path, function (err, data) {
+        res.statusCode = 200;
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.write(data);
+        return res.end();
+    });
+}
+
+module.exports = {fileResponse, customError, loadPage}

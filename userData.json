@@ -1,19 +1,10 @@
 {
-    "id":0,
-    "Username": "username",
-    "Email": "email",
-    "Password": "passwordEncrypted",
-    "Role": "Role",
-    "Interests": [],
-    "Preferred Career Pathways": [],
-    "Work Experience": [{
-        "locatoin":"location",
-        "length":0
-    }],
-    "Volunteer Experience": [{
-        "locatoin":"location",
-        "length":0
-    }],
-    "Age": 0,
-    "Gender": 0
+  "0": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
+  "1": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
+  "2": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
+  "3": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
+  "4": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
+  "5": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
+  "6": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
+  "7": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"}
 }

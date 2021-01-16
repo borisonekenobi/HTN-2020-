@@ -18,9 +18,9 @@ User.prototype.getTags = function() {
     return this.tags
 }
 
-function createUser(name, tags, role) {
+function createUser(email, username, role, tags) {
     //if registration conditions are met create new user
-    const newUser = new User(numUsedIds + 1, name, tags, role);
+    const newUser = new User(numUsedIds + 1, username, tags, role);
     //userDatabaseService.addUser(newUser);
 }
 

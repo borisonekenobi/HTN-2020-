@@ -37,6 +37,9 @@ fs.readFile('home.html', (err, html) => {
                 } else if (pathname.endsWith('.html')) {
                     util.fileResponse(res, pathname, 'text/html');
 
+                } else if (pathname.endsWith('.json')) {
+                    util.fileResponse(res, pathname, 'text/json');
+
                 } else if (pathname === 'favicon.ico') {
                     util.fileResponse(res, pathname, 'image/ico');
 

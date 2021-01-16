@@ -1,20 +1,58 @@
+const http = require('http');
+const url = require('url');
+const fs = require('fs');
+
 const port = 8000;
 const hostname = 'localhost'
 
-const http = require('http');
-const fs = require('fs');
+const util = require('./util.js');
 
-fs.readFile('main.html', (err, html) => {
-    if (err) {
-        throw err;
-    }
+//pages
+const signup = require('./signup.js');
+
+fs.readFile('home.html', (err, html) => {
+    if (err) throw err;
 
     const server = http.createServer(function (req, res) {
-        res.statusCode = 200;
-        res.setHeader('Content-type', 'text/html');
-        res.write(html);
-        res.end();
-    })
+        let pathname = url.parse(req.url, true).pathname;
+        pathname = pathname.substring(1);
+        fs.access(pathname, fs.constants.F_OK, (err) => {
+            if (!err) {
+                if (pathname.startsWith('css/')) {
+                    util.fileResponse(res, pathname, 'text/css');
+
+                } else if (pathname.startsWith('img/')) {
+                    if (pathname.startsWith('img/svg/')) util.fileResponse(res, pathname, 'image/svg+xml');
+                    else if (pathname.startsWith('img/png/')) util.fileResponse(res, pathname, 'image/png');
+                    else if (pathname.startsWith('img/jpg/')) util.fileResponse(res, pathname, 'image/jpg');
+                    else if (pathname.startsWith('img/ico/')) util.fileResponse(res, pathname, 'image/ico');
+
+                } else if (pathname.endsWith('.js')) {
+                    util.fileResponse(res, pathname, 'text/javascript');
+
+                } else if (pathname.endsWith('.html')) {
+                    util.fileResponse(res, pathname, 'text/html');
+
+                } else {
+                    res.statusCode = 404;
+                    return res.end();
+                }
+
+            } else if (pathname === '' || pathname === 'home') {
+                res.statusCode = 200;
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write(html);
+                return res.end();
+
+            } else if (pathname === 'signup') {
+                signup.signup(req, res);
+
+            } else {
+                res.statusCode = 404;
+                return res.end();
+            }
+        });
+    });
 
     server.listen(port, hostname, () => {
         console.log('Server started on port ' + port)

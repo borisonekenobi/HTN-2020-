@@ -1,5 +1,5 @@
 //test users
-const users = {};
+//const userDatabaseService = require('userDatabaseAPI.js');
 let numUsedIds = 0;
 
 const testMentor = new User(1, 'math, music, science', 'mentor');
@@ -18,10 +18,10 @@ User.prototype.getTags = function() {
     return this.tags
 }
 
-function createUser(name, tags, role) {
+function createUser(email, username, role, tags) {
     //if registration conditions are met create new user
-    const newUser = new User(numUsedIds + 1, name, tags, role);
-    users.push(newUser);
+    const newUser = new User(numUsedIds + 1, username, tags, role);
+    //userDatabaseService.addUser(newUser);
 }
 
 function submitClick() {

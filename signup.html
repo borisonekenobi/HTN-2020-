@@ -11,39 +11,70 @@
 </head>
 <body>
 <script src="createuser.js"></script>
-    <form>
-        <!--First part of form (email, username, user type)-->
-        <div id="loginInfoDiv">
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required><br><br>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required><br><br>
-            <label for="userType">User Type</label>
-            <select name="dropdown" id="userType" required>
-                <option value="mentee" selected>Mentee</option>
-                <option value="mentor">Mentor</option>
-            </select><br><br>
-        </div>
+<script src="util.js"></script>
+<form>
+    <!--First part of form (email, username, user type)-->
+    <div id="loginInfoDiv">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="userType">User Type</label>
+        <select name="dropdown" id="userType" required>
+            <option value="mentee" selected>Mentee</option>
+            <option value="mentor">Mentor</option>
+        </select><br><br>
+    </div>
 
-        <!--Second part of form (password)-->
-        <div id="passwordDiv" class="hidden">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br><br>
-            <label for="confirmPass">Confirm Password:</label>
-            <input type="password" id="confirmPass" name="confirmPass" required><br><br>
-        </div>
-        <input type="submit" value="Next" onclick="nextButton()">
-    </form>
+    <!--Second part of form (password)-->
+    <div id="passwordDiv" class="hidden">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br><br>
+        <label for="confirmPass">Confirm Password:</label>
+        <input type="password" id="confirmPass" required><br><br>
+    </div>
+    <input type="submit" id="submit" value="Next" onclick="buttonPressed()">
+</form>
 
 <script>
-    let i = 0;
-    function nextButton() {
-        let email = document.getElementById('email').value;
-        let username = document.getElementById('username').value;
-        let userType = document.getElementById('userType').value;
+    document.getElementById('loginInfoDiv').classList.remove('hidden');
+    document.getElementById('passwordDiv').classList.add('hidden');
+    document.getElementById('submit').value = "Next";
 
-        document.getElementById('loginInfoDiv').classList.add('hidden');
-        document.getElementById('passwordDiv').classList.remove('hidden');
+    let i = true;
+
+    let email = '';
+    let username = '';
+    let userType = '';
+
+    function buttonPressed() {
+        if (i) nextButton();
+        else submitButton();
+    }
+
+    function nextButton() {
+        email = document.getElementById('email').value;
+        if (!checkEmail(email)) {
+            //TODO: email is already in use
+        } else {
+            username = document.getElementById('username').value;
+            userType = document.getElementById('userType').value;
+
+            document.getElementById('loginInfoDiv').classList.add('hidden');
+            document.getElementById('passwordDiv').classList.remove('hidden');
+            document.getElementById('submit').value = "Submit";
+
+            i = false
+        }
+    }
+
+    function submitButton() {
+        let password = document.getElementById('password').value;
+        if (password === document.getElementById('confirmPass').value) {
+            createUser(email, username, userType, password);
+        } else {
+            //TODO: password does not match confirmPass
+        }
     }
 </script>
 </body>

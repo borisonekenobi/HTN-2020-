@@ -17,4 +17,9 @@ function customError(errFile) {
     });
 }
 
-module.exports = {fileResponse, customError}
+function checkEmail(email) {
+    console.log(email);
+    return true;
+}
+
+module.exports = {fileResponse, customError, checkEmail}

@@ -9,7 +9,13 @@
 }
 
 .empty {
-
+    background-color: #ffc0c0;
+    color: #ff5a5a;
+    text-align: left;
+    border-bottom: #ff3c3c 3px solid;
+    padding: 3%;
+    width: 100%;
+    margin-bottom: 2%;
 }
 
 .header {

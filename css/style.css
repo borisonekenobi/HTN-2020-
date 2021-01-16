@@ -5,16 +5,28 @@
     color: #f1f1f1;
     align-self: center;
     margin: auto;
+    width: 100%;
+    height: 5vh;
 }
 
-.bitch{
+.headerText{
     color: red;
     margin: auto;
+    padding: 0% 2.5%;
+    float: left;
 }
 
 #headerlogo {
     float: left;
-    width: 100%;
+    height: 100%
+}
+
+#joinButton{
+    align-self: right;
+    margin-right: 2vh;
+    float: right;
+    margin-top: 0.5vh;
+    border: 3vh;
 }
 
 /* Page content */

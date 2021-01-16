@@ -9,10 +9,34 @@
 <body>
 
 <div class="header" id="myHeader">
-    <img src="img/placeholder-256x256.png" id="headerlogo">
-    <h2 class="bitch">My Header</h2>
+    <img src="img/placeholder-256x256.png" id="headerlogo" alt="logo">
+    <h1 class="headerText">My Header</h1>
+    <div id="joinButton">
+        <button>Join Us!</button>
+    </div>
+    
 </div>
 
-<script src="index.js"></script>
+
+
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    let header = document.getElementById("myHeader");
+
+    // Get the offset position of the navbar
+    let sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+</script>
 </body>
 </html>

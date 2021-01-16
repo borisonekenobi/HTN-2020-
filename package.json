@@ -1,0 +1,8 @@
+{
+  "name": "HTN-2020-",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "bcrypt": "^5.0.0"
+  }
+}

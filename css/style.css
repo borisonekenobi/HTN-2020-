@@ -108,18 +108,68 @@ h1.form{
     color: #000000;
     font-size: 3em;
     padding: 5% 0 0 0;
-    margin: 5% auto 10% auto;
+    margin: 5% auto 5% auto;
+}
+
+.fields{
+    margin-bottom: 7%;
 }
 
 .formBlanksContainer{
     width: 24vw;
     height: 34vh;
-    margin: 15% auto 0 auto;
+    margin: 10% auto 0 auto;
 }
 
-label.form{
+p.form{
     color: #888888;
-    float: left;
+    text-align: left;
+    padding: 1%;
+    margin: 1% 0;
+}
+
+input.form{
+    background-color: #ececec;
+    color: #b7b7b7;
+    text-align: left;
+    border-bottom: #817d7d 3px solid;
+    padding: 3%;
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+#forgotPassword{
+    color: #727070;
+    text-decoration: none;
+    float: right;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.loginButton{
+    width: 24vw;
+    margin: 0 auto 0 auto;
+}
+
+button.form{
+    width: 100%;
+    font-size: 2.25em;
+    padding: 1.5%;
+    margin-bottom: 5%;
+    background-color: #0996c6;
+    color: #ffffff;
+}
+
+h6.form{
+    color: #888888;
+    padding: 1%;
+    margin: 1% 0;
+}
+
+a.form{
+    text-decoration: none;
+    color: #00ccff;
+    font-weight: bold;
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */

@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body class="form">
-<script src="createuser.js"></script>
+<script src="createUser.js"></script>
 <script src="util.js"></script>
 
 <div class="header" id="header">
@@ -20,45 +20,49 @@
         Counsellor Connect
     </h1>
 
-    <button class="headerButton" onclick="window.location.href='/HTN-2020-/login.html'">Log In</button>
-    <button class="headerButton" onclick="window.location.href='/HTN-2020-/signup.html'">Sign Up</button>
+    <button class="headerButton" onclick="window.location.href='/login'">Log In</button>
+    <button class="headerButton" onclick="window.location.href='/signup'">Sign Up</button>
 </div>
 
 
 <div class="formContainer">
-    <form>
+    <form id="loginInfoForm">
         <h1 class="form">Sign Up</h1>
-        <!--First part of form (email, username, user type)-->
-        <div class="formBlanksContainer">
-            <div id="loginInfoContainer">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" required><br><br>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br><br>
-                <label for="userType">User Type</label>
-                <select name="dropdown" id="userType" required>
-                    <option value="mentee" selected>Mentee</option>
-                    <option value="mentor">Mentor</option>
-                </select><br><br>
-            </div>
+        <div id="loginInfoContainer">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
 
-            <!--Second part of form (password)-->
-            <div id="passwordContainer" class="hidden">
-                <label for="password">Password:</label>
-                <input type="password" id="password" required><br><br>
-                <label for="confirmPass">Confirm Password:</label>
-                <input type="password" id="confirmPass" required><br><br>
-            </div>
-            <input type="submit" id="submit" value="Next" onclick="buttonPressed()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="userType">User Type</label>
+            <select name="dropdown" id="userType" required>
+                <option value="mentee" selected>Mentee</option>
+                <option value="mentor">Mentor</option>
+            </select><br><br>
+
+            <input type="submit" id="next" value="Next" onclick="buttonPressed()">
+        </div>
+    </form>
+
+    <form id="passwordForm" class="hidden">
+        <h1 class="form">Sign Up</h1>
+        <div class="formBlanksContainer">
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+
+            <label for="confirmPass">Confirm Password:</label>
+            <input type="password" id="confirmPass" required><br><br>
+
+            <input type="submit" id="submit" value="Submit" onclick="buttonPressed()">
         </div>
     </form>
 </div>
 
 
 <script>
-    document.getElementById('loginInfoContainer').classList.remove('hidden');
-    document.getElementById('passwordContainer').classList.add('hidden');
-    document.getElementById('submit').value = "Next";
+    document.getElementById('loginInfoForm').classList.remove('hidden');
+    document.getElementById('passwordForm').classList.add('hidden');
 
     let i = true;
 
@@ -79,9 +83,8 @@
             username = document.getElementById('username').value;
             userType = document.getElementById('userType').value;
 
-            document.getElementById('loginInfoContainer').classList.add('hidden');
-            document.getElementById('passwordContainer').classList.remove('hidden');
-            document.getElementById('submit').value = "Submit";
+            document.getElementById('loginInfoForm').classList.add('hidden');
+            document.getElementById('passwordForm').classList.remove('hidden');
 
             i = false
         }
@@ -90,7 +93,7 @@
     function submitButton() {
         let password = document.getElementById('password').value;
         if (password === document.getElementById('confirmPass').value) {
-            createUser(email, username, userType, password);
+            User(email, username, userType, password);
         } else {
             //TODO: password does not match confirmPass
         }

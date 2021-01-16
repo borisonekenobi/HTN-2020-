@@ -10,10 +10,8 @@ const util = require('./util.js');
 //pages
 const signup = require('./signup.js');
 
-fs.readFile('main.html', (err, html) => {
-    if (err) {
-        throw err;
-    }
+fs.readFile('home.html', (err, html) => {
+    if (err) throw err;
 
     const server = http.createServer(function (req, res) {
         let pathname = url.parse(req.url, true).pathname;
@@ -39,7 +37,12 @@ fs.readFile('main.html', (err, html) => {
                     res.statusCode = 404;
                     return res.end();
                 }
-                console.log(!err);
+
+            } else if (pathname === '' || pathname === 'home') {
+                res.statusCode = 200;
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write(html);
+                return res.end();
 
             } else if (pathname === 'signup') {
                 signup.signup(req, res);

@@ -25,10 +25,10 @@ function addToDatabase(user) {
 }
 
 function onRegistrationSubmit() {
-    register(id, name, tags, role);
+    createuser(id, name, tags, role);
 }
 
-function register(id, name, tags, role) {
+function createuser(id, name, tags, role) {
     //if registration conditions are met create new user
     const newUser = new User(numUsedIds + 1, name, tags, role);
     addToDatabase();

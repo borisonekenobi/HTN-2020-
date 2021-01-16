@@ -89,3 +89,8 @@
 .sticky + .content {
     padding-top: 102px;
 }
+
+.error404{
+    font-size: xxx-large;
+    color: #00ccff;
+}

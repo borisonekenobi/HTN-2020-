@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+.header{
+    background-color: #eeeeee;
+    color: #00ccff;
+    height: 10vh;
+    width: 100vw;
+    font-size: 2em;
+}
+
+img.headerLogo{
+    width: 7vh;
+    margin: 1vh 1vw;
+    border: #ff1493 1px solid;
+    float: left;
+}
+
+h1.headerText{
+    padding: 0.5vh 2vw 0 0;
+    float: left;
+    font-size: 2em;
+}
+
+button.joinUs{
+    background-color: #00ccff;
+    padding: 0.5%;
+    color: #f1f1f1;
+    text-align: center;
+    margin: 1.5vh 3vw 0 0;
+    float: right;
+    font-size: 1em;
+}
+
+.pageTextContainer{
+    text-align: center;
+    color: #00ccff;
+    font-size: xx-large;
+}
+
+h1.pageText{
+    margin: 5% auto 0 auto;
+    line-height: 125%;
+}
+
+p.pageText{
+    margin: 2% auto 0 auto;
+    color: #817d7d;
+}
+
+button.tryItNow{
+    text-align: center;
+    background-color: #ff1493;
+    color: #ffffff;
+    padding: 2% 7% 2% 7%;
+    font-size: 1.5em;
+    margin: 5% auto 2% auto;
+}
+
+.howItWorksContainer{
+    height: 50vh;
+    width: 100vw;
+    background-color: #ff61be;
+    margin: 5% 0 0 0;
+}
+
+h1.howItWorks{
+    text-align: center;
+    color: #ffffff;
+    font-size: xxx-large;
+
+}

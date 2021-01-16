@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+</head>
+<body>
+
+<div class="header">
+    <img src="img/png/placeholder-256x256.png" class="headerLogo" alt="logo">
+    <h1 class="headerText">
+        Company Name
+    </h1>
+
+    <button class="joinUs">Join Us</button>
+</div>
+
+<div class="pageTextContainer">
+    <h1 class="pageText">
+        Find a
+        <br>
+        <span style="color:#000000;">mentor</span>
+    </h1>
+
+    <p class="pageText">
+        Get professional guidance<br>for your passion
+    </p>
+    <button class="tryItNow">Try it Now!</button>
+</div>
+
+<div class="howItWorksContainer">
+    <h1 class="howItWorks">
+        How It Works
+    </h1>
+    <img src="img/png/howItWorks.png" class="howItWorks" alt="flowchart">
+    <p class="howItWorks">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Dignissimos illum pariatur sed aspernatur neque a atque!
+        Delectus distinctio id suscipit illum earum amet,
+        accusamus ad quasi veniam perspiciatis nihil expedita!
+    </p>
+</div>
+
+
+<script>
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the header
+    let header = document.getElementById("myHeader");
+
+    // Get the offset position of the navbar
+    let sticky = header.offsetTop;
+
+    // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+</script>
+</body>
+</html>

@@ -8,24 +8,27 @@
 </head>
 <body>
 
-<div class="header" id="myHeader">
-    <img src="img/png/placeholder-256x256.png" id="headerLogo" alt="logo">
+<div class="header" id="header">
+    <img src="img/placeholder-256x256.png" id="headerLogo" alt="logo">
     <h1 class="headerText">My Header</h1>
-    <div id="joinButton">
-        <a href="http://localhost:8000/signup"><input type="submit" value="Join Us!"/></a>
+    <div id="joinButtonDiv">
+        <button id="joinButton">Join Us!</button>
     </div>
+
 </div>
 
 <div class="pageTextDiv">
-    <p class="pageText">
-        <!-- <h1 class="pageTextHeader">Find A<br>Mentor</h1> -->
-        Find A <br>
-        Mentor
+    <p class="pageHeading">
+        Find A </p>
+    <p id="mentor">Mentor</p>
     </p>
+
+    <p class="pageText">Get professional guidance<br> for your passion</p>
+
+    <button id="tryItNowButton">Try It Now</button>
+
 </div>
 
-<!-- ALL EXTERNAL JAVASCRIPT HERE: -->
-<script id="joinButtonScript" type="text/javascript" src="signup.js"></script>
 
 <script>
     // When the user scrolls the page, execute myFunction

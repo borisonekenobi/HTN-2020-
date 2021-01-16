@@ -7,9 +7,6 @@ const hostname = 'localhost'
 
 const util = require('./util.js');
 
-//pages
-const signup = require('./signup.js');
-
 //custom error pages
 const e404 = './customErrors/404.html'
 const e418 = './customErrors/418.html'
@@ -57,7 +54,10 @@ fs.readFile('home.html', (err, html) => {
                 return res.end();
 
             } else if (pathname === 'signup') {
-                signup.signup(req, res);
+                util.loadPage(req, res, './signup.html');
+
+            } else if (pathname === 'login') {
+                util.loadPage(req, res, './login.html');
 
             } else {
                 res.statusCode = 404;

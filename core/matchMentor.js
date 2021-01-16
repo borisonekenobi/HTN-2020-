@@ -4,11 +4,11 @@ let mentee = undefined;
 
 function findRelevant(mentee) {
 
-    for (let count = 0; count <= allMentors.length; count++) {
+    for (let i = 0; i <= allMentors.length; count++) {
         const newFind = isMatch(allMentors[count], mentee);
         if (newFind !== false) {
             console.log("New match with " + newFind.name);
-            found[found.length-1] = newFind;
+            found.push(newFind);
         }
     }
 }
@@ -25,6 +25,6 @@ function isMatch(mentor, mentee) {
 
 findRelevant(mentee);
 
-for (let count = 0; count <= found[count]; count++) {
-    console.log("Matched with " + found[count].name);
+for (let i = 0; i <= found[i]; i++) {
+    console.log("Matched with " + found[i].name);
 }

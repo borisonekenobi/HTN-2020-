@@ -10,6 +10,10 @@ const util = require('./util.js');
 //pages
 const signup = require('./signup.js');
 
+//custom error pages
+const e404 = './customErrors/404.html'
+const e418 = './customErrors/418.html'
+
 fs.readFile('home.html', (err, html) => {
     if (err) throw err;
 
@@ -34,7 +38,9 @@ fs.readFile('home.html', (err, html) => {
                     util.fileResponse(res, pathname, 'text/html');
 
                 } else {
-                    res.statusCode = 404;
+                    res.statusCode = 418;
+                    res.writeHead(418, {'Content-Type': 'text/html'});
+                    res.write(util.customError(e418));
                     return res.end();
                 }
 
@@ -49,6 +55,8 @@ fs.readFile('home.html', (err, html) => {
 
             } else {
                 res.statusCode = 404;
+                res.writeHead(404, {'Content-Type': 'text/html'});
+                //res.write(util.customError(e404));
                 return res.end();
             }
         });

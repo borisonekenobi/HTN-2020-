@@ -1,0 +1,19 @@
+{
+    "id":0,
+    "Username": "username",
+    "Email": "email",
+    "Password": "passwordEncrypted",
+    "Role": "Role",
+    "Interests": [],
+    "Preferred Career Pathways": [],
+    "Work Experience": [{
+        "locatoin":"location",
+        "length":0
+    }],
+    "Volunteer Experience": [{
+        "locatoin":"location",
+        "length":0
+    }],
+    "Age": 0,
+    "Gender": 0
+}

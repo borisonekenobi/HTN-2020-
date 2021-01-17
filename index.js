@@ -2,7 +2,7 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
-const express = require('express');
+/*const express = require('express');
 const app = express();
 app.listen(8000, () => console.log('Listening at 8000'));
 app.use(express.static('/signup.html'));
@@ -13,7 +13,7 @@ app.post('/api', (request, response) => {
     response.json({
         Status: 'success'
     })
-});
+});*/
 
 const port = 8000;
 const hostname = 'localhost'

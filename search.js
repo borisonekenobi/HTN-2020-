@@ -6,7 +6,7 @@ function search(query) {
         let user = users[i.toString()];
         if (user.Role === 'mentor') {
             for (let j = 0; j < user.Fields.length; j++) {
-                if (query === user.Fields[j]) {
+                if (query.toLowerCase() === user.Fields[j].toLowerCase()) {
                     mentors.push(user);
                 }
             }

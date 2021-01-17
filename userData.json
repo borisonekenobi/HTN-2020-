@@ -1,10 +1,10 @@
 {
-  "0": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
-  "1": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
-  "2": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
-  "3": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
-  "4": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
-  "5": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
-  "6": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"},
-  "7": {"Email": "email", "Username": "username", "Role": "Role", "Password": "passwordEncrypted"}
+  "0": {"Email": "email", "Username": "mentor1", "Role": "mentor", "Password": "passwordEncrypted", "Fields": ["a", "b", "c"]},
+  "1": {"Email": "email", "Username": "mentee1", "Role": "mentee", "Password": "passwordEncrypted"},
+  "2": {"Email": "email", "Username": "mentor2", "Role": "mentor", "Password": "passwordEncrypted", "Fields": ["a", "c"]},
+  "3": {"Email": "email", "Username": "mentor3", "Role": "mentor", "Password": "passwordEncrypted", "Fields": ["a", "b"]},
+  "4": {"Email": "email", "Username": "mentee2", "Role": "mentee", "Password": "passwordEncrypted"},
+  "5": {"Email": "email", "Username": "mentee3", "Role": "mentee", "Password": "passwordEncrypted"},
+  "6": {"Email": "email", "Username": "mentee4", "Role": "mentee", "Password": "passwordEncrypted"},
+  "7": {"Email": "email", "Username": "mentor4", "Role": "mentor", "Password": "passwordEncrypted", "Fields": ["a", "c"]}
 }

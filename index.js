@@ -6,6 +6,7 @@ const port = 8000;
 const hostname = 'localhost'
 
 const util = require('./util.js');
+const search = require('./search.js');
 
 //custom error pages
 const e404 = './customErrors/404.html'
@@ -59,10 +60,19 @@ fs.readFile('home.html', (err, html) => {
             } else if (pathname === 'login') {
                 util.loadPage(req, res, './login.html');
 
+            } else if (pathname.startsWith('search=')) {
+                res.statusCode = 200;
+                res.writeHead(200, {"Content-Type": "application/json"});
+                res.write(JSON.stringify(search.search(pathname.substring(7))));
+                return res.end();
+
+            } else if (pathname === 'search') {
+                util.loadPage(req, res, './search.html');
+
             } else {
                 res.statusCode = 404;
-                res.writeHead(404, {'Content-Type': 'text/html'});
-                //res.write(util.customError(e404));
+                res.writeHead(200, {'Content-Type': 'text/html'});
+                res.write(util.customError(e404));
                 return res.end();
             }
         });

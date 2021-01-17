@@ -213,7 +213,36 @@ a.form{
 
 .signUp2.formContainer{
     height: 100vh;
+}
 
+#interestContainer{
+    justify-content: left;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    child-align: left;
+    font-size: 1.25em;
+}
+
+input[type=checkbox].form.interests{
+    float:left;
+    margin: 0 0;
+    width: 10%;
+    border-color: #00ccff;
+    color: #00ccff;
+}
+
+/*input[type=checkbox]:checked.form.interests{*/
+/*    float:left;*/
+/*    margin: 0 0;*/
+/*    width: 10%;*/
+/*    border-color: #00ccff;*/
+/*    background-color: #00ccff;*/
+/*    visibility: hidden;*/
+/*}*/
+
+label.form.interests{
+    float: none;
 }
 
 .btn-group button {

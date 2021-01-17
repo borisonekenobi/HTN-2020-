@@ -1,15 +1,15 @@
-const crypt = require('/crypt.js');
+const crypt = require('./crypt.js');
 
-let numUsedIds = 0;
-
-function createUser(id, name, email, password, role) {
+function createUser(email, username, password, role) {
+    let encryptedPass = crypt.encrypt(password);
     let user = {
-        'id': id,
-        'email': email,
-        'username': name,
-        'password': crypt.encrypt(password),
-        'role': role
-    }
-    //TODO: save user to userData.json
-    numUsedIds++;
+        'Email': email,
+        'Username': username,
+        'Role': role,
+        'Password': encryptedPass
+    };
+    const users = require('./userData.json');
+    localStorage.setItem(Object.keys(users).length.toString(), JSON.stringify(user));
 }
+
+createUser('test', 'test', 'test', 'mentor');

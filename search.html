@@ -23,7 +23,15 @@
     let list = [];
 
     function getSearchResults() {
-        fetch('./search=' + document.getElementById('search').value)
+        let query = document.getElementById('search').value;
+
+        if (query === '') {
+            document.getElementById('search').classList.add('empty');
+            document.getElementById('search').classList.remove('form');
+            return;
+        }
+
+        fetch('./search=' + query)
             .then(response => response.json())
             .then(data => {
                 list = Object.entries(data);

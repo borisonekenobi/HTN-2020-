@@ -253,11 +253,21 @@ label.form.interests{
     cursor: pointer; /* Pointer/hand icon */
     width: 60%; /* Set a width if needed */
     display: block; /* Make the buttons appear below each other */
-    margin: auto;
+    margin: 2% auto;
+    align-content: center;
 }
 
-.btn-group button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
+#backButton{
+    margin-right: 20%;
+}
+
+#back-btn{
+    width: 40vw;
+    font-size: 2.25em;
+    padding: 1.5%;
+    margin: 0 auto 5% auto;
+    background-color: #0996c6;
+    color: #ffffff;
 }
 
 /* Add a background color on hover */

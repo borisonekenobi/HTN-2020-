@@ -12,13 +12,12 @@ function search(query) {
             }
         }
     }
-    //return 'test';
 
     let arrayToString = JSON.stringify(Object.assign({}, mentors));  // convert array to string
     return JSON.parse(arrayToString);
     /**
      * ^ yes this is copied from the internet ^
-     * don't ask me what it does cuz idk
+     *   don't ask me what it does cuz idk
      **/
 }
 

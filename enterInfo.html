@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter your Information</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="form">
+<script src="createUser.js"></script>
+<script src="util.js"></script>
+
+<div class="header" id="header">
+    <img src="img/png/placeholder-256x256.png" class="headerLogo" alt="logo">
+    <h1 class="headerText">
+        Counsellor Connect
+    </h1>
+
+    <button class="headerButton" onclick="window.location.href='/login'">Log In</button>
+    <button class="headerButton" onclick="window.location.href='/signup'">Sign Up</button>
+</div>
+
+<div class="formContainer">
+    <h1 class="form">Enter Information</h1>
+    <h4 class="form">(Separate items by ", ")</h4>
+    <div class="formBlanksContainer">
+        <form id="infoForm">
+            <div class="fields" id="infoContainer">
+                <p class="form">Interests</p>
+                <input class="form" type="text" id="interests" name="interests" placeholder="Interests">
+
+                <p class="form">Preferred Career Pathways</p>
+                <input class="form" type="text" id="careerPathways" name="careerPathways" placeholder="Preferred Career Pathways">
+
+                <p class="form">Work Experience</p>
+                <input class="form" type="text" id="workExperience" name="workExperience" placeholder="Work Experience">
+
+                <p class="form">Volunteer Experience</p>
+                <input class="form" type="text" id="volunteerExperience" name="volunteerExperience" placeholder="Volunteer Experience">
+
+                <p class="form">Age</p>
+                <input class="form" type="number" id="age" value="0" name="age" placeholder="Age">
+
+                <p class="form">Gender
+                    <select class="form" name="Gender" id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+            </div>
+            <!--                <label for="userType">User Type</label>-->
+            <!--                <select name="dropdown" id="userType" required>-->
+            <!--                    <option value="mentee" selected>Mentee</option>-->
+            <!--                    <option value="mentor">Mentor</option>-->
+            <!--                </select><br><br>-->
+        </form>
+        <div class="submitButton">
+            <button name="submit" class="form" id="next" onclick="submitButton()">Confirm</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let interests = '';
+    let careerPaths = '';
+    let workExp = '';
+    let volunteerExp = '';
+    let age = '';
+    let gender = '';
+
+    function submitButton() {
+        let interests = document.getElementById('interests').value.split(', ');
+        let careerPaths = document.getElementById('careerPathways').value.split(', ');
+        let workExp = document.getElementById('workExperience').value.split(', ');
+        let volunteerExp = document.getElementById('volunteerExperience').value.split(', ');
+        let age = document.getElementById('age').value;
+        let gender = document.getElementById('gender').value;
+
+        console.log(interests);
+        console.log(careerPaths);
+        console.log(workExp);
+        console.log(volunteerExp);
+        console.log(age);
+        console.log(gender);
+    }
+
+</script>
+</body>
+</html>

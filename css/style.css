@@ -247,12 +247,13 @@ label.form.interests{
 
 .btn-group button {
     background-color: #4CAF50; /* Green background */
-    border: 1px solid green; /* Green border */
+    border: 2px solid #FFFF00; /* Green border */
     color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
+    padding: 10px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
-    width: 50%; /* Set a width if needed */
+    width: 60%; /* Set a width if needed */
     display: block; /* Make the buttons appear below each other */
+    margin: auto;
 }
 
 .btn-group button:not(:last-child) {

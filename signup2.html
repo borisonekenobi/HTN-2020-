@@ -20,33 +20,30 @@
 <div class="formContainer signUp2">
     <h1 class="form">Sign Up</h1>
     <div class="form signUp2">
-        <form name="userData" method="post">
+        <label for="userType">User Type</label>
+        <select name="dropdown" id="userType" required>
+            <option value="mentee" selected>Mentee</option>
+            <option value="mentor">Mentor</option>
+        </select>
 
-            <label for="userType">User Type</label>
-            <select name="dropdown" id="userType" required>
-                <option value="mentee" selected>Mentee</option>
-                <option value="mentor">Mentor</option>
-            </select>
+        <div id="interestContainer"></div>
 
-            <div id="interestContainer"></div>
-
-            <div class="fields">
-                <p class="form">Age</p>
-                <input type="date" id="age">
-                <p class="form">Gender</p>
-                <select name="gender" id="userGender" required>
-                    <option value="male" selected>Male</option>
-                    <option value="female">Female</option>
-                    <option value="nonBinary">Non-Binary</option>
+        <div class="fields">
+            <p class="form">Age</p>
+            <input type="date" id="age">
+            <p class="form">Gender</p>
+            <select name="gender" id="userGender" required>
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+                <option value="nonBinary">Non-Binary</option>
 <!--                    <option value="other">Other</option>-->
-                    <option value="notSay">Rather Not Say</option>
-                </select>
-            </div>
+                <option value="notSay">Rather Not Say</option>
+            </select>
+        </div>
 
-            <div class="loginButton">
-                <button name="signUp" class="form" id="submitDetails" onclick="submitButton()">Submit</button>
-            </div>
-        </form>
+        <div class="loginButton">
+            <button name="signUp" class="form" id="submitDetails" onclick="submitButton()">Submit</button>
+        </div>
     </div>
 </div>
 

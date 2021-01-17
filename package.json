@@ -2,6 +2,7 @@
   "name": "HTN-2020-",
   "version": "1.0.0",
   "dependencies": {
+    "express": "^4.17.1",
     "dotenv": "^8.2.0",
     "mongodb": "^3.6.3"
   },

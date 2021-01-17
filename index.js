@@ -2,21 +2,8 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
-/*const express = require('express');
-const app = express();
-app.listen(8000, () => console.log('Listening at 8000'));
-app.use(express.static('/signup.html'));
-app.use(express.json({ limit:'1mb' }));
-
-app.post('/api', (request, response) => {
-    console.log(request.body);
-    response.json({
-        Status: 'success'
-    })
-});*/
-
 const port = 8000;
-const hostname = 'localhost'
+const hostname = '192.168.1.114'
 
 const util = require('./util.js');
 const search = require('./search.js');

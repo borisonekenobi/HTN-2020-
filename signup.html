@@ -22,8 +22,8 @@
 <div class="formContainer">
     <h1 class="form">Sign Up</h1>
     <div class="formBlanksContainer">
-        <form id="loginInfoForm">
-            <div class="fields" id="loginInfoContainer">
+        <div class="fields" id="loginInfoContainer">
+            <div id="first">
                 <p class="form">Email</p>
                 <input class="form" type="text" id="email" name="email" autocomplete="email" placeholder="Email">
 
@@ -32,20 +32,22 @@
 
                 <p class="form">Password</p>
                 <input class="form" type="password" id="password" name="new-password" autocomplete="new-password" placeholder="Password">
-
-                <p class="hidden">Confirm Password:</p>
-                <input class="hidden" type="password" id="confirmPass" name="new-password" placeholder="Confirm Password">
-
             </div>
-            <!--                <label for="userType">User Type</label>-->
-            <!--                <select name="dropdown" id="userType" required>-->
-            <!--                    <option value="mentee" selected>Mentee</option>-->
-            <!--                    <option value="mentor">Mentor</option>-->
-            <!--                </select><br><br>-->
-            <div class="loginButton">
-                <button name="signUp" class="form" id="next" onclick="nextButton()">Sign Up</button>
+
+            <div id="second" class="hidden">
+                <p class="form">Confirm Password:</p>
+                <input class="form" type="password" id="confirmPass" name="new-password" placeholder="Confirm Password">
             </div>
-        </form>
+
+        </div>
+        <!--                <label for="userType">User Type</label>-->
+        <!--                <select name="dropdown" id="userType" required>-->
+        <!--                    <option value="mentee" selected>Mentee</option>-->
+        <!--                    <option value="mentor">Mentor</option>-->
+        <!--                </select><br><br>-->
+        <div class="loginButton">
+            <button name="signUp" class="form" id="next" onclick="nextButton()">Sign Up</button>
+        </div>
     </div>
 </div>
 
@@ -82,8 +84,8 @@
                 document.getElementById('email').classList.add('empty');
                 return;
             } else {
-                document.getElementById('loginInfoForm').classList.add('hidden');
-                document.getElementById('passwordForm').classList.remove('hidden');
+                document.getElementById('first').classList.add('hidden')
+                document.getElementById('second').classList.remove('hidden');
             }
         }
     }

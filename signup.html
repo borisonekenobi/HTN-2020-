@@ -21,66 +21,70 @@
 
 <div class="formContainer">
     <h1 class="form">Sign Up</h1>
-
     <div class="formBlanksContainer">
         <form id="loginInfoForm">
             <div class="fields" id="loginInfoContainer">
                 <p class="form">Email</p>
-                <input class="form" type="text" id="email" name="email" autocomplete="email" placeholder="Email" required>
+                <input class="form" type="text" id="email" name="email" autocomplete="email" placeholder="Email">
+
                 <p class="form">Username</p>
-                <input class="form" type="text" id="username" name="username" autocomplete="username" placeholder="Username" required>
+                <input class="form" type="text" id="username" name="username" autocomplete="username" placeholder="Username">
+
                 <p class="form">Password</p>
-                <input class="form" type="password" id="password" name="new-password" autocomplete="new-password" placeholder="Password" required>
+                <input class="form" type="password" id="password" name="new-password" autocomplete="new-password" placeholder="Password">
+
+                <p class="hidden">Confirm Password:</p>
+                <input class="hidden" type="password" id="confirmPass" name="new-password" placeholder="Confirm Password">
+
             </div>
-<!--                <label for="userType">User Type</label>-->
-<!--                <select name="dropdown" id="userType" required>-->
-<!--                    <option value="mentee" selected>Mentee</option>-->
-<!--                    <option value="mentor">Mentor</option>-->
-<!--                </select><br><br>-->
-                <div class="loginButton">
-                    <button name="signUp" class="form" id="next" onclick="nextButton()">Sign Up</button>
-                </div>
+            <!--                <label for="userType">User Type</label>-->
+            <!--                <select name="dropdown" id="userType" required>-->
+            <!--                    <option value="mentee" selected>Mentee</option>-->
+            <!--                    <option value="mentor">Mentor</option>-->
+            <!--                </select><br><br>-->
+            <div class="loginButton">
+                <button name="signUp" class="form" id="next" onclick="nextButton()">Sign Up</button>
+            </div>
         </form>
     </div>
-
-    <form id="passwordForm" class="hidden">
-        <h1 class="form">Sign Up</h1>
-        <div class="formBlanksContainer">
-
-
-            <label for="confirmPass">Confirm Password:</label>
-            <input type="password" id="confirmPass" required><br><br>
-
-            <input type="button" id="submit" value="Submit" onclick="submitButton()">
-        </div>
-    </form>
 </div>
-
 
 <script>
     let email = '';
     let username = '';
+    let password = '';
+    let confirmPass = '';
     let userType = '';
 
     function nextButton() {
+        let i = true
         email = document.getElementById('email').value;
         username = document.getElementById('username').value;
-        userType = document.getElementById('userType').value;
+        password = document.getElementById('password').value;
 
         if (email === '') {
             document.getElementById('email').classList.add('empty');
-            return;
+            i = false;
         } else if (username === '') {
-            return;
-        } else if (userType === '') {
+            document.getElementById('username').classList.add('empty');
+            i = false;
+        } else if (password === '') {
+            document.getElementById('password').classList.add('empty');
+            i = false;
+        }
+
+        if (!i) {
             return;
         }
 
-        if (!checkEmail(email)) {
-            //TODO: email is already in use
-        } else {
-            document.getElementById('loginInfoForm').classList.add('hidden');
-            document.getElementById('passwordForm').classList.remove('hidden');
+        if (i) {
+            if (!checkEmail(email)) {
+                document.getElementById('email').classList.add('empty');
+                return;
+            } else {
+                document.getElementById('loginInfoForm').classList.add('hidden');
+                document.getElementById('passwordForm').classList.remove('hidden');
+            }
         }
     }
 

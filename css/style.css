@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'montserratblack';
+    url('css/fonts/montserrat-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     border: 0;
@@ -40,7 +47,7 @@ h1.headerText{
     padding: 0.5vh 2vw 0 0;
     float: left;
     font-size: 2em;
-    font-family: "Lovelo Black";
+    font-family: "LoveloBlack", serif, Verdana;
 }
 
 button.headerButton{
@@ -51,21 +58,22 @@ button.headerButton{
     margin: 1.5vh 3vw 0 0;
     float: right;
     font-size: 0.75em;
-    font-family: Montserrat;
+    font-family: 'montserratblack', Arial, serif;
+    font-weight: bold;
 }
 
 .pageTextContainer{
     text-align: center;
     color: #000000;
     font-size: xx-large;
-    font-family: Montserrat;
+    font-family: 'montserratblack', Arial, serif;
     height: 15em;
 }
 
 h1.pageText{
     margin: 5% auto 0 auto;
     line-height: 125%;
-    font-family: Montserrat;
+    font-family: 'montserratblack', Arial, serif;
 }
 
 p.pageText{
@@ -80,7 +88,7 @@ button.tryItNow{
     padding: 1% 4% 1% 4%;
     font-size: 1em;
     margin: 5% auto 2% auto;
-    font-family: Montserrat;
+    font-family: 'montserratblack', Arial, serif;
 }
 
 .howItWorksContainer{
@@ -88,7 +96,7 @@ button.tryItNow{
     width: 100%;
     background-color: #ff1150;
     margin: 5% auto;
-    font-family: Montserrat;
+    font-family: 'montserratblack', Arial, serif;
 }
 
 h1.howItWorks{
@@ -96,7 +104,7 @@ h1.howItWorks{
     color: #ffffff;
     font-size: 5em;
     margin: 15vh 0 2.5%;
-    padding: 2% 1% 0% 1%;
+    padding: 2% 1% 0 1%;
 }
 
 img.howItWorks{
@@ -201,6 +209,11 @@ a.form{
 .sticky {
     position: fixed;
     top: 0;
+}
+
+.signUp2.formContainer{
+    height: 100vh;
+
 }
 
 .btn-group button {

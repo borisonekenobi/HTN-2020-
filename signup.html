@@ -34,17 +34,11 @@
                 <input class="form" type="password" id="password" name="new-password" autocomplete="new-password" placeholder="Password">
             </div>
 
-            <div id="second" class="hidden">
+            <div id="second" class="form">
                 <p class="form">Confirm Password:</p>
                 <input class="form" type="password" id="confirmPass" name="new-password" placeholder="Confirm Password">
             </div>
-
         </div>
-        <!--                <label for="userType">User Type</label>-->
-        <!--                <select name="dropdown" id="userType" required>-->
-        <!--                    <option value="mentee" selected>Mentee</option>-->
-        <!--                    <option value="mentor">Mentor</option>-->
-        <!--                </select><br><br>-->
         <div class="loginButton">
             <button name="signUp" class="form" id="next" onclick="nextButton()">Sign Up</button>
         </div>
@@ -52,26 +46,27 @@
 </div>
 
 <script>
-    let email = '';
-    let username = '';
-    let password = '';
-    let confirmPass = '';
-    let userType = '';
-
     function nextButton() {
         let i = true
-        email = document.getElementById('email').value;
-        username = document.getElementById('username').value;
-        password = document.getElementById('password').value;
+        let email = document.getElementById('email').value;
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        let confirmPass = document.getElementById('confirmPass').value;
 
         if (email === '') {
             document.getElementById('email').classList.add('empty');
             i = false;
-        } else if (username === '') {
+        }
+        if (username === '') {
             document.getElementById('username').classList.add('empty');
             i = false;
-        } else if (password === '') {
+        }
+        if (password === '') {
             document.getElementById('password').classList.add('empty');
+            i = false;
+        }
+        if (confirmPass === '') {
+            document.getElementById('confirmPass').classList.add('empty');
             i = false;
         }
 
@@ -79,31 +74,19 @@
             return;
         }
 
+        if (password !== confirmPass) {
+            document.getElementById('password').classList.add('empty');
+            document.getElementById('confirmPass').classList.add('empty');
+            return;
+        }
+
         if (i) {
             if (!checkEmail(email)) {
                 document.getElementById('email').classList.add('empty');
-                return;
             } else {
-                document.getElementById('first').classList.add('hidden')
-                document.getElementById('second').classList.remove('hidden');
+                fetch('./createUser')
+                createUser(email, username, userType, password);
             }
-        }
-    }
-
-    function submitButton() {
-        let password = document.getElementById('password').value;
-        let confirmPass = document.getElementById('confirmPass').value;
-
-        if (password === '') {
-            return;
-        } else if (confirmPass === '') {
-            return;
-        }
-
-        if (password === confirmPass) {
-            createUser(email, username, userType, password);
-        } else {
-            //TODO: password does not match confirmPass
         }
     }
 </script>

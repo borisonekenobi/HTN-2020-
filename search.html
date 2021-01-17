@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div id="searchDiv" class="formBlanksContainer">
+    <p class="form">Search:</p>
+    <input class="form" type="text" id="search" name="searchBox" placeholder="Search">
+    <div class="loginButton">
+        <button name="searchBtn" class="form" id="searchBtn" onclick="getSearchResults();">Search</button>
+    </div>
+</div>
+<div id="results" class="hidden" onload="printBtn();">
+
+</div>
+<script>
+    let list = [];
+
+    function getSearchResults() {
+        fetch('./search=' + document.getElementById('search').value)
+            .then(response => response.json())
+            .then(data => {
+                list = Object.entries(data);
+                printBtn(list);
+            })
+            .catch(function (err) {
+                console.error(err);
+            });
+
+    }
+
+    function printBtn(list) {
+        document.getElementById('searchDiv').classList.add('hidden');
+        document.getElementById('results').classList.remove('hidden');
+        for (let i = 0; i < list.length; i++) {
+            let btn = document.createElement("button");
+            let t = document.createTextNode(list[i][1]["Username"]);
+            btn.appendChild(t);
+            document.getElementById('results').appendChild(btn);
+        }
+    }
+</script>
+</body>
+</html>

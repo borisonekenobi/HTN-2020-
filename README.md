@@ -8,3 +8,5 @@ Instructions for Use:
 1. Create an account (enter email, username, password, interests)
 2. Search for mentors with matching interests
 3. Establish and maintain a connection with the mentors you're matched with
+
+![alt text](https://github.com/borisonekenobi/HTN-2020-/tree/master/img/png/Demo1.png?raw=true)

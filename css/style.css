@@ -244,7 +244,11 @@ label.form.interests {
     float: none;
 }
 
-.container {
+.outer-container {
+
+}
+
+.inner-container {
     position: relative;
     text-align: center;
     color: white;
@@ -253,6 +257,8 @@ label.form.interests {
 .btn-group button {
     background-color: #ececec; /* Green background */
     border-bottom: 2px solid #b7b7b7; /* Green border */
+    border-image: linear-gradient(to left, #b7b7b7, #ececec);
+    border-image-slice: 1;
     color: black; /* White text */
     padding: 25px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */

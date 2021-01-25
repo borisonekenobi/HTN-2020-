@@ -1,0 +1,12 @@
+{
+  "0": {"Name": "Technology", "Uses": 3, "Approved": true},
+  "1": {"Name": "Business", "Uses": 2, "Approved": true},
+  "2": {"Name": "Biology", "Uses": 3, "Approved": true},
+  "3": {"Name": "Chemistry", "Uses": 2, "Approved": true},
+  "4": {"Name": "Physics", "Uses": 4, "Approved": true},
+  "5": {"Name": "Math", "Uses": 3, "Approved": true},
+  "6": {"Name": "Literature", "Uses": 2, "Approved": true},
+  "7": {"Name": "Linguistics", "Uses": 0, "Approved": true},
+  "8": {"Name": "History", "Uses": 0, "Approved": true},
+  "9": {"Name": "Geography", "Uses": 1, "Approved": true}
+}

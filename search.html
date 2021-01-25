@@ -62,6 +62,11 @@
             let t = document.createTextNode(list[i][1]["Username"]);
             btn.appendChild(t);
             document.getElementById('search-results').appendChild(btn);
+
+            let img = document.createElement("img");
+            img.src = list[i][1]["Avatar"];
+            img.classList.add('avatar');
+            document.getElementById('search-results').appendChild(img);
         }
     }
 

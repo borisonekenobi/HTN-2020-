@@ -23,7 +23,7 @@
     </div>
 </div>
 <div id="btn-group" class="hidden">
-    <div id="search-results" class="btn-group"></div>
+
 </div>
 
 <div id="backButton" class="hidden">
@@ -56,17 +56,25 @@
     function printBtn(list) {
         document.getElementById('searchDiv').classList.add('hidden');
         document.getElementById('btn-group').classList.remove('hidden');
+        document.getElementById('btn-group').classList.add('btn-group');
         document.getElementById('backButton').classList.remove('hidden');
         for (let i = 0; i < list.length; i++) {
+            let div = document.createElement("div");
+            div.classList.add('container');
+
             let btn = document.createElement("button");
             let t = document.createTextNode(list[i][1]["Username"]);
             btn.appendChild(t);
-            document.getElementById('search-results').appendChild(btn);
+            btn.classList.add('btn-group');
+            div.appendChild(btn);
 
             let img = document.createElement("img");
             img.src = list[i][1]["Avatar"];
             img.classList.add('avatar');
-            document.getElementById('search-results').appendChild(img);
+            img.classList.add('left');
+            div.appendChild(img);
+
+            document.getElementById('btn-group').appendChild(div);
         }
     }
 

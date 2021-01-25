@@ -240,41 +240,55 @@ input[type=checkbox].form.interests{
 /*    visibility: hidden;*/
 /*}*/
 
-label.form.interests{
+label.form.interests {
     float: none;
 }
 
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
 .btn-group button {
-    background-color: #4CAF50; /* Green background */
-    border: 2px solid #FFFF00; /* Green border */
-    color: white; /* White text */
-    padding: 10px; /* Some padding */
+    background-color: #ececec; /* Green background */
+    border-bottom: 2px solid #b7b7b7; /* Green border */
+    color: black; /* White text */
+    padding: 25px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
-    width: 60%; /* Set a width if needed */
+    width: 100%; /* Set a width if needed */
     display: block; /* Make the buttons appear below each other */
-    margin: 2% auto;
+    margin: 0;
     align-content: center;
 }
 
-#backButton{
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #b7b7b7;
+}
+
+.avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.left {
+    position: absolute;
+    top: 50%;
+    left: 34px; /* 32 + 2 (btn-group button border) = 34 */
+    transform: translate(-50%, -50%);
+}
+
+#backButton {
     margin-right: 20%;
 }
 
-#back-btn{
+#back-btn {
     width: 40vw;
     font-size: 2.25em;
     padding: 1.5%;
     margin: 0 auto 5% auto;
     background-color: #0996c6;
     color: #ffffff;
-}
-
-/* Add a background color on hover */
-.btn-group button:hover {
-    background-color: #3e8e41;
-}
-
-.avatar{
-    width: 128px;
-    height: 128px;
 }

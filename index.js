@@ -3,7 +3,7 @@ const url = require('url');
 const fs = require('fs');
 
 const port = 8000;
-const hostname = '192.168.1.114'
+const hostname = '192.168.1.114' //Change this to localhost when testing (always push with; 192.168.1.114)
 
 const util = require('./util.js');
 const search = require('./search.js');

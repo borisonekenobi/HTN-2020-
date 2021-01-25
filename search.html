@@ -22,10 +22,7 @@
         <button name="searchBtn" class="form" id="searchBtn" onclick="getSearchResults();">Search</button>
     </div>
 </div>
-<div id="btn-group" class="hidden">
-
-</div>
-
+<div id="btn-group" class="hidden"></div>
 <div id="backButton" class="hidden">
     <button name="back" id="back-btn" onclick="resetSearch();">Back</button>
 </div>
@@ -57,10 +54,11 @@
         document.getElementById('searchDiv').classList.add('hidden');
         document.getElementById('btn-group').classList.remove('hidden');
         document.getElementById('btn-group').classList.add('btn-group');
+        document.getElementById('btn-group').classList.add('outer-container');
         document.getElementById('backButton').classList.remove('hidden');
         for (let i = 0; i < list.length; i++) {
             let div = document.createElement("div");
-            div.classList.add('container');
+            div.classList.add('inner-container');
 
             let btn = document.createElement("button");
             let t = document.createTextNode(list[i][1]["Username"]);
@@ -82,7 +80,7 @@
         document.getElementById('searchDiv').classList.remove('hidden');
         document.getElementById('btn-group').classList.add('hidden');
         document.getElementById('backButton').classList.add('hidden');
-        document.getElementById('search-results').innerHTML = '';
+        document.getElementById('btn-group').innerHTML = '';
     }
 </script>
 </body>

@@ -8,6 +8,7 @@ function search(query) {
             for (let j = 0; j < user.Fields.length; j++) {
                 if (query.toLowerCase() === user.Fields[j].toLowerCase()) {
                     mentors.push({
+                        "ID": user["ID"],
                         "Avatar": user["Avatar"],
                         "Username": user["Username"],
                         "Rating": user["Rating"]

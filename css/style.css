@@ -255,15 +255,29 @@ label.form.interests {
 }
 
 .btn-group button {
-    background-color: #ececec; /* Green background */
-    border-bottom: 2px solid #b7b7b7; /* Green border */
+    background-color: #ececec;
+    border-bottom: 2px solid #b7b7b7;
     border-image: linear-gradient(to left, #b7b7b7, #ececec);
     border-image-slice: 1;
-    color: black; /* White text */
-    padding: 25px; /* Some padding */
+    color: black;
+    padding: 25px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    margin: 0;
+    align-content: center;
+}
+
+.btn-group-testMentor button {
+    background-color: #f5e6e6;
+    border-bottom: 2px solid #b7b7b7;
+    border-image: linear-gradient(to left, #b7b7b7, #ececec);
+    border-image-slice: 1;
+    color: black;
+    padding: 40px; /* Some padding */
     cursor: pointer; /* Pointer/hand icon */
     width: 100%; /* Set a width if needed */
-    display: block; /* Make the buttons appear below each other */
+    /*display: block; /* Make the buttons appear below each other */
     margin: 0;
     align-content: center;
 }
@@ -273,16 +287,20 @@ label.form.interests {
     background-color: #b7b7b7;
 }
 
+.btn-testMentor button:hover {
+    background-color: #b7b7b7;
+}
+
 .avatar {
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     border-radius: 50%;
 }
 
 .left {
     position: absolute;
     top: 50%;
-    left: 34px; /* 32 + 2 (btn-group button border) = 34 */
+    left: 42px; /* 32 + 2 (btn-group button border) = 34 */
     transform: translate(-50%, -50%);
 }
 

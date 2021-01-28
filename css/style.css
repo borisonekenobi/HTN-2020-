@@ -257,7 +257,7 @@ label.form.interests {
 .btn-group button {
     background-color: #ececec;
     border-bottom: 2px solid #b7b7b7;
-    border-image: linear-gradient(to left, #b7b7b7, #ececec);
+    border-image: linear-gradient(to left, #085177, #023854);
     border-image-slice: 1;
     color: black;
     padding: 25px;
@@ -271,7 +271,7 @@ label.form.interests {
 .btn-group-testMentor button {
     background-color: #f5e6e6;
     border-bottom: 2px solid #b7b7b7;
-    border-image: linear-gradient(to left, #b7b7b7, #ececec);
+    border-image: linear-gradient(to left, #085177, #023854);
     border-image-slice: 1;
     color: black;
     padding: 40px; /* Some padding */
@@ -284,11 +284,11 @@ label.form.interests {
 
 /* Add a background color on hover */
 .btn-group button:hover {
-    background-color: #b7b7b7;
+    background-color: #085177;
 }
 
 .btn-testMentor button:hover {
-    background-color: #b7b7b7;
+    background-color: #085177;
 }
 
 .avatar {
